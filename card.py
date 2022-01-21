@@ -1,5 +1,3 @@
-from ast import Num
-from cmd import PROMPT
 import random
 
 class Card:
@@ -19,8 +17,6 @@ class Card:
     
     def newNumber(self):
         """Generates a new number"""
-
-        value=0
         self.value = random.randint(1, 13)
 
     def display(self):
