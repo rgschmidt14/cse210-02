@@ -2,11 +2,11 @@ import random
 
 class Card:
 
-    """display the cards randomly way.
+    """display the cards radnomly.
     
     Atributes:
     value (int): the number guess
-    points (int): the number ponints to track."""
+    points (int): the number points to track."""
 
 
     def __init__(self):
