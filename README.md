@@ -2,4 +2,4 @@
 
 Game Team assignment for week 3 
 Hilo Game
-Authors: Mariuxi Cajape, Alvaro Diaz
+Authors: Mariuxi Cajape, Alvaro Diaz, Gunnar Schmidt, 
