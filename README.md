@@ -9,6 +9,8 @@
 1. Mariuxi Cajape, 
 2. Alvaro Diaz, 
 3. Gunnar Schmidt, rgschmidt14@byui.edu
+4. Milan
+5. Martin
 
 #####Software needed to run:
 * Visual Studio Code
