@@ -1,3 +1,4 @@
+from tkinter.messagebox import askquestion
 from card import Card
 
 class Director:
@@ -17,19 +18,29 @@ class Director:
             self.askToGuess()
             Card.nextNumber(self)
             self.calculateScore()
-            self.getInputs()
+            if self.score <= 0: 
+                print ("Game Over")
+                break
+            self.askToPlayAgain()
 
     def calculateScore(self):
         if self.userGuess == "h":
+            if self.card.nextValue < self.card.value: 
+                self.score += 100
+            else:
+                self.score -= 75
+                    
+
+        elif self.userGuess == "l":
             if self.card.nextValue > self.card.value: 
                 self.score += 100
-        elif self.userGuess == "l":
-            if self.card.nextValue < self.card.value:
+            else:
                 self.score -= 75
+            
+        print(f"Your score is: {self.score} ")
 
 
-
-    def getInputs(self):
+    def askToPlayAgain(self):
         """Ask the user if they want to roll.
 
         Args:
@@ -37,14 +48,14 @@ class Director:
         """
         playAgain = input("Play again? [y/n]: ")
         if playAgain == "y":
-            self.isPlaying 
+            self.isPlaying
+            
         elif playAgain =="n":
             print ("Thank you. Good bye!")
             self.isPlaying = False
         else:
             print("wrong command, bye!")
             self.isPlaying = False
-
 
 
 

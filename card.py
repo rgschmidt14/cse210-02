@@ -5,12 +5,11 @@ class Card:
     """display the cards radnomly.
     
     Atributes:
-    value (int): the number guess
-    points (int): the number points to track."""
+    value (int): random number
+    nextValue (int): second number to compare"""
 
 
     def __init__(self):
-        self.newNum=True
         self.value=0
         self.nextValue = 0
 
@@ -20,9 +19,10 @@ class Card:
         self.value = random.randint(1, 13)
         print(f"The Card is: {self.value} ")
 
+        """Generates a second random number to compare with the first one"""
     def nextNumber(self):
         self.nextValue = random.randint(1, 13)
-        print(f"The next Card is: {self.nextValue} ")
+        print(f"Next Card was: {self.nextValue} ")
 
  
         
