@@ -13,10 +13,11 @@ class Director:
 
 
     def startGame(self):
+        """Call the method in the required order and checks if the score is cero to finish the game"""
         while self.isPlaying:
-            Card.newNumber(self)
+            self.card.newNumber()
             self.askToGuess()
-            Card.nextNumber(self)
+            self.card.nextNumber()
             self.calculateScore()
             if self.score <= 0: 
                 print ("Game Over")
@@ -24,15 +25,16 @@ class Director:
             self.askToPlayAgain()
 
     def calculateScore(self):
+        """Check if the user guessed to add 100 points. Otherwise, it discounts 75 points"""
         if self.userGuess == "h":
-            if self.card.nextValue < self.card.value: 
+            if self.card.nextValue >= self.card.value: 
                 self.score += 100
             else:
                 self.score -= 75
                     
 
         elif self.userGuess == "l":
-            if self.card.nextValue > self.card.value: 
+            if self.card.nextValue <= self.card.value: 
                 self.score += 100
             else:
                 self.score -= 75

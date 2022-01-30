@@ -10,18 +10,18 @@ class Card:
 
 
     def __init__(self):
-        self.value=0
+        self.value = 0
         self.nextValue = 0
 
     
     def newNumber(self):
         """Generates a new number"""
-        self.value = random.randint(1, 13)
+        self.value = random.randint(1, 12)
         print(f"The Card is: {self.value} ")
 
         """Generates a second random number to compare with the first one"""
     def nextNumber(self):
-        self.nextValue = random.randint(1, 13)
+        self.nextValue = random.randint(1, 12)
         print(f"Next Card was: {self.nextValue} ")
 
  
